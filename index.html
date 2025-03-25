@@ -3,82 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Polyglot Passion – Language Learning That Feels Like Living</title>
+  <title>Polyglot Passion – Learn Languages Naturally</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #ffffff;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #ffffff);
       color: #333;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1200px;
       margin: auto;
-      padding: 2rem;
+      padding: 3rem 1rem;
     }
 
     header {
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      background: linear-gradient(to right, #0070f3, #00c6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin-bottom: 1rem;
     }
 
     p.lead {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: #555;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .feature {
-      background: #f9f9f9;
-      padding: 1.5rem;
-      border-radius: 10px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 4rem;
-      color: #888;
+      margin-bottom: 2rem;
     }
 
     input[type="email"] {
-      padding: 0.5rem;
+      padding: 0.75rem;
       width: 60%;
-      margin-top: 1rem;
       margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
     }
 
     button {
-      padding: 0.5rem 1rem;
+      padding: 0.75rem 1.25rem;
       background: #0070f3;
       color: white;
       border: none;
       border-radius: 5px;
+      font-size: 1rem;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
     button:hover {
       background: #0059c1;
     }
 
-    @media (max-width: 768px) {
-      .features {
-        grid-template-columns: 1fr;
-      }
+    .features, .testimonials, .languages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
 
+    .feature, .testimonial, .language {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover, .testimonial:hover, .language:hover {
+      transform: translateY(-5px);
+    }
+
+    h3 {
+      margin-bottom: 0.75rem;
+      color: #0070f3;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      color: #888;
+      padding: 2rem 1rem;
+    }
+
+    @media (max-width: 768px) {
       input[type="email"] {
         width: 100%;
       }
@@ -90,7 +111,7 @@
     <header>
       <h1>Language Learning That Feels Like Living</h1>
       <p class="lead">
-        Say goodbye to flashcards and grammar drills. Polyglot Passion brings you personalized, real-world content—simplified to your level, rephrased in real time.
+        Say goodbye to grammar drills. Polyglot Passion personalizes real-world content—simplified to your level, rephrased in real time.
       </p>
       <input type="email" placeholder="Enter your email" />
       <br />
@@ -100,33 +121,65 @@
     <section class="features">
       <div class="feature">
         <h3>🎧 Listen on the Go</h3>
-        <p>
-          News, podcasts, and short stories tailored to your level—perfect for commutes and coffee breaks.
-        </p>
+        <p>News, podcasts, and short stories tailored to your level—perfect for commutes and coffee breaks.</p>
       </div>
       <div class="feature">
         <h3>📰 Real Content, Not Textbooks</h3>
-        <p>
-          Stay engaged with stories in tech, culture, and politics—rephrased dynamically to match your reading level.
-        </p>
+        <p>Stay engaged with stories in tech, culture, and politics—rephrased dynamically to match your reading level.</p>
       </div>
       <div class="feature">
-        <h3>✨ Challenge Without Overwhelm</h3>
-        <p>
-          Always in your sweet spot: just hard enough to learn, never so hard that you quit.
-        </p>
+        <h3>✨ Always in the Sweet Spot</h3>
+        <p>Just hard enough to grow, never so hard that you quit. Learning optimized for flow state.</p>
       </div>
       <div class="feature">
         <h3>🔒 Privacy First</h3>
-        <p>
-          We don’t sell your data. Ever. Ben would be proud.
-        </p>
+        <p>We don’t sell your data. Ever. This is built for learners, not advertisers.</p>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="testimonial">
+        <h3>Ben, Software Engineer 🇺🇸</h3>
+        <p>“Polyglot Passion lets me learn Spanish through tech news during my subway commute. It doesn’t feel like studying—it’s part of my life.”</p>
+      </div>
+      <div class="testimonial">
+        <h3>Léa, International Relations Student 🇫🇷</h3>
+        <p>“I’ve been using it to polish my Portuguese by reading Brazilian news and listening to pop culture podcasts. Love the dynamic rephrasing!”</p>
+      </div>
+      <div class="testimonial">
+        <h3>Koji, Startup Founder 🇯🇵</h3>
+        <p>“It’s the only app that lets me dive into real English startup content while still keeping it digestible. Way better than traditional courses.”</p>
+      </div>
+    </section>
+
+    <section class="languages">
+      <div class="language">
+        <h3>🔥 Spanish</h3>
+        <p>The most popular pick. Great for business, travel, and media lovers. Content from Spain, Mexico, and Latin America.</p>
+      </div>
+      <div class="language">
+        <h3>🌍 French</h3>
+        <p>Ideal for diplomacy, fashion, and culture junkies. Dive into politics, films, and news from Paris to Dakar.</p>
+      </div>
+      <div class="language">
+        <h3>🌏 Japanese</h3>
+        <p>From anime to economic analysis, this is a top choice for creators and innovators alike.</p>
       </div>
     </section>
 
     <footer>
-      <p>Made with ❤️ for curious minds</p>
+      <p>Made with ❤️ by language nerds. © 2025 Polyglot Passion</p>
     </footer>
   </div>
+
+  <script>
+    const button = document.querySelector('button');
+    button.addEventListener('mouseenter', () => {
+      button.style.transform = 'scale(1.05)';
+    });
+    button.addEventListener('mouseleave', () => {
+      button.style.transform = 'scale(1)';
+    });
+  </script>
 </body>
 </html>
